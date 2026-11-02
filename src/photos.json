@@ -1,0 +1,62 @@
+{
+ "jungle": {
+  "file": "assets/img/jungle-path.jpg",
+  "w": 1000,
+  "h": 667,
+  "alt": "A dirt path winds through green forest in Chitwan National Park, Nepal",
+  "title": "The rains on the previous night had made the jungle paths wet and slushy (49695780048).jpg",
+  "where": "A morning jungle walk in Chitwan National Park, Nepal (2019)",
+  "author": "shankar s.",
+  "short": "shankar s.",
+  "licence": "CC BY 2.0",
+  "licence_short": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:The_rains_on_the_previous_night_had_made_the_jungle_paths_wet_and_slushy_(49695780048).jpg",
+  "changes": "Cropped, resized and recompressed; metadata removed."
+ },
+ "forest": {
+  "file": "assets/img/forest-road.jpg",
+  "w": 640,
+  "h": 400,
+  "alt": "Tall trees line a gravel road beside a wire fence at the edge of a community forest in Chitwan, Nepal",
+  "title": "USAID Measuring Impact Conservation Enterprise Retrospective (Nepal; National Trust for Nature Conservation) (39404227375).jpg",
+  "where": "Kumrose Community Forest, Chitwan, Nepal (2017)",
+  "author": "Jason Houston, for USAID",
+  "short": "Jason Houston, USAID",
+  "licence": "Public domain (US government work)",
+  "licence_short": "public domain",
+  "licence_url": "https://commons.wikimedia.org/wiki/File:USAID_Measuring_Impact_Conservation_Enterprise_Retrospective_(Nepal;_National_Trust_for_Nature_Conservation)_(39404227375).jpg#Licensing",
+  "source_url": "https://commons.wikimedia.org/wiki/File:USAID_Measuring_Impact_Conservation_Enterprise_Retrospective_(Nepal;_National_Trust_for_Nature_Conservation)_(39404227375).jpg",
+  "changes": "Cropped, resized and recompressed; metadata removed."
+ },
+ "hills": {
+  "file": "assets/img/terraced-hills.jpg",
+  "w": 640,
+  "h": 400,
+  "alt": "Terraced hillsides and a village seen from the air in the hills of Nepal",
+  "title": "Terraced Fields (7476657730).jpg",
+  "where": "Terraced hills seen from a helicopter between Kathmandu and Lukla, Nepal (1997)",
+  "author": "John Pavelka",
+  "short": "John Pavelka",
+  "licence": "CC BY 2.0",
+  "licence_short": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Terraced_Fields_(7476657730).jpg",
+  "changes": "Cropped, resized and recompressed; metadata removed."
+ },
+ "edge": {
+  "file": "assets/img/forest-edge.jpg",
+  "w": 640,
+  "h": 400,
+  "alt": "A dirt road at the edge of a community forest in Chitwan, with cattle grazing ahead",
+  "title": "USAID Measuring Impact Conservation Enterprise Retrospective (Nepal; National Trust for Nature Conservation) (40301291771).jpg",
+  "where": "Edge of the Kumrose Community Forest, Chitwan, Nepal (2017)",
+  "author": "Jason Houston, for USAID",
+  "short": "Jason Houston, USAID",
+  "licence": "Public domain (US government work)",
+  "licence_short": "public domain",
+  "licence_url": "https://commons.wikimedia.org/wiki/File:USAID_Measuring_Impact_Conservation_Enterprise_Retrospective_(Nepal;_National_Trust_for_Nature_Conservation)_(40301291771).jpg#Licensing",
+  "source_url": "https://commons.wikimedia.org/wiki/File:USAID_Measuring_Impact_Conservation_Enterprise_Retrospective_(Nepal;_National_Trust_for_Nature_Conservation)_(40301291771).jpg",
+  "changes": "Cropped, resized and recompressed; metadata removed."
+ }
+}

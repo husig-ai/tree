@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build the Rukh site: src/pages + src/partials + src/svg -> docs/*.html (static, no dependencies)."""
-import hashlib, os, re, sys
+import hashlib, html as htmllib, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC, OUT = os.path.join(HERE, "src"), os.path.join(HERE, "docs")
@@ -28,13 +28,34 @@ def register(n):
     return "\n".join(rows)
 
 
-def render(slug, body, meta, parts, svgs):
+def photo(key, photos, lazy=True):
+    """An <img> with its credit line. Credits and licences come from src/photos.json, one place."""
+    p = photos[key]
+    load = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
+    return (f'<img src="{p["file"]}" alt="{htmllib.escape(p["alt"], quote=True)}" width="{p["w"]}" height="{p["h"]}"{load}>'
+            f'<a class="credit" href="credits.html#{key}">Illustrative photo: {htmllib.escape(p["short"])}, {htmllib.escape(p["licence_short"])}</a>')
+
+
+def credits(photos):
+    rows = []
+    for key, p in photos.items():
+        rows.append(
+            f'<li id="{key}"><strong>{htmllib.escape(p["title"])}</strong>. {htmllib.escape(p["where"])}.<br>'
+            f'By {htmllib.escape(p["author"])}. <a href="{p["source_url"]}" rel="noopener">Source</a>. '
+            f'Licence: <a href="{p["licence_url"]}" rel="noopener">{htmllib.escape(p["licence"])}</a>. '
+            f'Changes: {htmllib.escape(p["changes"])}</li>')
+    return "\n".join(rows)
+
+
+def render(slug, body, meta, parts, svgs, photos=None):
     cur = lambda m: ' aria-current="page"' if m.group(1) == slug else ""
     out = parts["head"] + parts["header"] + body + parts["footer"]
     out = out.replace("{{title}}", meta["title"]).replace("{{desc}}", meta["desc"])
     out = re.sub(r"\{\{cur:(\w+)\}\}", cur, out)
     out = out.replace("{{aud:ind}}", "false" if slug == "business" else "true").replace("{{aud:biz}}", "true" if slug == "business" else "false")
     out = re.sub(r"\{\{svg:(\w+)\}\}", lambda m: svgs[m.group(1)], out)
+    out = re.sub(r"\{\{photo:(\w+)(:eager)?\}\}", lambda m: photo(m.group(1), photos, not m.group(2)), out)
+    out = out.replace("{{credits}}", credits(photos))
     out = re.sub(r"\{\{treegrid:(\d+)\}\}", lambda m: treegrid(int(m.group(1)), svgs["tree"]), out)
     out = re.sub(r"\{\{register:(\d+)\}\}", lambda m: register(int(m.group(1))), out)
     return out
@@ -51,13 +72,15 @@ def versioned(html):
 def main():
     parts = {k: read(SRC, "partials", f"{k}.html") for k in ("head", "header", "footer")}
     svgs = {f[:-4]: read(SRC, "svg", f).strip() for f in os.listdir(os.path.join(SRC, "svg")) if f.endswith(".svg")}
+    pj = os.path.join(SRC, "photos.json")
+    photos = json.load(open(pj, encoding="utf8")) if os.path.exists(pj) else {}
     pages = sorted(f for f in os.listdir(os.path.join(SRC, "pages")) if f.endswith(".html"))
     for f in pages:
         raw = read(SRC, "pages", f)
         m = re.match(r"<!--\s*title:\s*(.+?)\s*\|\s*desc:\s*(.+?)\s*-->\n", raw)
         if not m:
             sys.exit(f"{f}: first line must be <!-- title: X | desc: Y -->")
-        html = render(f[:-5], raw[m.end():], {"title": m.group(1), "desc": m.group(2)}, parts, svgs)
+        html = render(f[:-5], raw[m.end():], {"title": m.group(1), "desc": m.group(2)}, parts, svgs, photos)
         if chr(8212) in html or chr(8211) in html:
             sys.exit(f"{f}: em or en dash found (house style)")
         if re.search(r"\{\{\w", html):

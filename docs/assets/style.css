@@ -148,7 +148,8 @@ textarea { min-height: 96px; }
 
 /* project card */
 .pcard .photo { aspect-ratio: 16 / 10; background: var(--hill2); position: relative; }
-.pcard .photo svg { width: 100%; height: 100%; }
+.pcard .photo svg, .pcard .photo img { width: 100%; height: 100%; }
+.pcard .photo img { object-fit: cover; }
 .pcard .tag { position: absolute; top: 10px; left: 10px; }
 .pcard .meta { color: var(--muted); font-size: .875rem; }
 .pcard .price { font-size: 1.25rem; font-weight: 650; }
@@ -255,3 +256,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .cert { border-color: #000; }
 }
 .print-only { display: none; }
+
+/* photos with an inline credit */
+.credit { position: absolute; right: 6px; bottom: 6px; font-size: .7rem; line-height: 1.4; padding: 2px 8px; border-radius: 6px; background: rgba(0, 0, 0, .66); color: #fff; text-decoration: none; max-width: calc(100% - 12px); }
+.credit:hover { text-decoration: underline; }
+.hero-photo { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--hill2); aspect-ratio: 3 / 2; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero.has-photo .wrap { display: grid; gap: 32px; padding-top: 48px; padding-bottom: 56px; align-items: center; }
+@media (min-width: 900px) { .hero.has-photo .wrap { grid-template-columns: 1.05fr 1fr; } }
+.hero.has-photo .art { display: none; }
+.credits-list { padding-left: 1.2em; } .credits-list li { margin-bottom: 14px; }
