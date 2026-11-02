@@ -1,0 +1,9 @@
+<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Photo placeholder: hillside planting site">
+<rect width="320" height="200" fill="var(--sky)"/>
+<circle class="sun" cx="250" cy="44" r="22"/>
+<path class="hill1" d="M0 120 C60 90 120 110 180 92 C230 78 280 100 320 88 V200 H0Z"/>
+<path class="hill2" d="M0 150 C70 120 130 150 200 128 C250 112 290 130 320 124 V200 H0Z"/>
+<path class="hill3" d="M0 182 C80 158 160 184 240 166 C280 158 305 166 320 162 V200 H0Z"/>
+<g class="treeglyph"><path d="M60 146 53 158h5l-6 9h8v6h3v-6h8l-6-9h5z"/><path d="M110 152 105 161h4l-5 7h6v5h2v-5h6l-5-7h4z"/><path d="M220 150 213 162h5l-6 9h8v6h3v-6h8l-6-9h5z"/></g>
+<text x="12" y="190" font-size="11" fill="var(--ink)" font-family="system-ui, sans-serif">photo placeholder</text>
+</svg>

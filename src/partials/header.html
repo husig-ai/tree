@@ -1,0 +1,31 @@
+<a class="skip" href="#main">Skip to content</a>
+<div class="mock-banner" role="note">Concept mock. Nothing here is for sale, no trees are planted, every number is sample data. <a href="components.html">What is copied from where</a></div>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="logo" href="index.html" aria-label="Rukh, home">{{svg:tree}}<span>Rukh</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="plant.html"{{cur:plant}}>Plant and gift</a>
+      <a href="project.html"{{cur:project}}>Projects</a>
+      <a href="business.html"{{cur:business}}>For companies</a>
+      <a href="transparency.html"{{cur:transparency}}>Transparency</a>
+    </nav>
+    <div class="head-tools">
+      <div class="audience" role="group" aria-label="Who are you">
+        <a href="index.html" aria-current="{{aud:ind}}">Individuals</a>
+        <a href="business.html" aria-current="{{aud:biz}}">Business</a>
+      </div>
+      <label class="sr" for="lang">Language</label>
+      <select class="lang" id="lang" aria-describedby="lang-note">
+        <option>EN</option><option disabled>DE (not built)</option><option disabled>FR (not built)</option><option disabled>IT (not built)</option>
+      </select>
+      <span id="lang-note" class="sr">Only English exists in this mock.</span>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"/></svg><span class="t">Theme</span></button>
+      <a class="icon-btn" href="checkout.html" aria-label="Basket"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 8h14l-1.5 11h-11z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="t">Basket</span> <span class="badge-count" data-basket-count>0</span></a>
+      <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="index.html">Home</a><a href="plant.html">Plant and gift</a><a href="project.html">Projects</a><a href="business.html">For companies</a><a href="transparency.html">Transparency and register</a><a href="forest.html">Sample forest</a><a href="tree.html">Sample tree page</a>
+  </nav>
+</header>
+<main id="main">

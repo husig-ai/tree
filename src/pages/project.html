@@ -1,0 +1,112 @@
+<!-- title: Bardiya lowland forest, a sample project page | desc: A project page with status, stats, seven tabs, species, planting sites, reports and a buy box. -->
+<div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / <a href="index.html#projects">Projects</a> / Bardiya lowland forest</p>
+  <div class="split section">
+    <div>
+      <div class="card flat" style="margin-bottom:16px"><div class="pcard"><div class="photo" style="aspect-ratio:21/8">{{svg:photo}}</div></div></div>
+      <div class="row"><span class="chip">Planting</span><span class="chip sample"></span><span class="chip">Bardiya, western Nepal</span></div>
+      <h1 style="margin-top:12px">Bardiya lowland forest</h1>
+      <p class="lede">A community forest group plants native and fruit trees on degraded land at the edge of the forest, and looks after them for three years.</p>
+      <div class="row" style="margin-bottom:16px">
+        <button class="btn small ghost" type="button" data-copy="url">Copy link</button>
+        <button class="btn small ghost" type="button" onclick="this.textContent='Following (mock)'">Follow updates</button>
+      </div>
+      <div class="stats" aria-label="Project numbers, sample data">
+        <div class="stat"><div class="label">Trees planted</div><div class="value">1,600</div><div class="sub"><span class="chip sample"></span></div></div>
+        <div class="stat"><div class="label">Still to plant</div><div class="value">8,400</div><div class="sub"><span class="chip sample"></span></div></div>
+        <div class="stat"><div class="label">Hectares</div><div class="value">14</div><div class="sub"><span class="chip sample"></span></div></div>
+        <div class="stat"><div class="label">Followers</div><div class="value">212</div><div class="sub"><span class="chip sample"></span></div></div>
+      </div>
+
+      <div class="tabs section" style="padding-bottom:0">
+        <div role="tablist" aria-label="Project sections">
+          <button role="tab" id="tab-updates" aria-controls="p-updates">Updates</button>
+          <button role="tab" id="tab-about" aria-controls="p-about">About</button>
+          <button role="tab" id="tab-sites" aria-controls="p-sites">Planting sites</button>
+          <button role="tab" id="tab-species" aria-controls="p-species">Species</button>
+          <button role="tab" id="tab-questions" aria-controls="p-questions">Questions</button>
+          <button role="tab" id="tab-reviews" aria-controls="p-reviews">Reviews</button>
+          <button role="tab" id="tab-trees" aria-controls="p-trees">Trees</button>
+        </div>
+
+        <div role="tabpanel" id="p-updates" aria-labelledby="tab-updates">
+          <div class="row between"><h2 style="font-size:1.3rem">Updates <span class="chip sample"></span></h2>
+            <div><label class="sr" for="sort">Sort updates</label><select id="sort" data-sort style="width:auto"><option value="new">Newest</option><option value="pop">Popular</option><option value="best">Best</option></select></div></div>
+          <div class="feed" id="feed">
+            <article data-new="3" data-pop="40" data-best="2"><time datetime="2026-09-12">2026-09-12</time><h3>Second planting round finished</h3><p>600 saplings went in on the east slope. Each tree was photographed and its point recorded.</p><span class="chip">#Planting</span> <span class="chip">#LandRestoration</span></article>
+            <article data-new="2" data-pop="85" data-best="3"><time datetime="2026-08-02">2026-08-02</time><h3>3-month check: first results</h3><p>The group walked the first site and logged each tree as alive, dead or missing. The log is public in the register.</p><span class="chip">#Monitoring</span></article>
+            <article data-new="1" data-pop="20" data-best="1"><time datetime="2026-06-20">2026-06-20</time><h3>Nursery visit with the planting group</h3><p>Seedlings grown locally, hardened for two weeks before planting.</p><span class="chip">#Community</span> <span class="chip">#Nursery</span></article>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="p-about" aria-labelledby="tab-about" hidden>
+          <h2 style="font-size:1.3rem">About this project</h2>
+          <p>The partner holds the right to plant on this land and keeps the trees. We pay for planting, three years of care and the checks. <span class="chip sample"></span></p>
+          <div class="card stack">
+            <h3>Partner</h3>
+            <p style="margin:0">Community forest user group <span class="chip sample"></span></p>
+            <p class="muted small" style="margin:0">Real partner name, registration and a signed agreement replace this card before launch.</p>
+          </div>
+          <h3 style="margin-top:20px">Reports</h3>
+          <div class="grid cols-2">
+            <div class="card"><h3>Partner report</h3><p class="muted small">Annual PDF with trees planted, hectares and workdays.</p><span class="chip sample"></span></div>
+            <div class="card"><h3>Live planting data</h3><p class="muted small">Point and photo records open to anyone, from a third-party tool.</p><span class="chip warn">Planned, not arranged</span></div>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="p-sites" aria-labelledby="tab-sites" hidden>
+          <h2 style="font-size:1.3rem">Planting sites</h2>
+          {{svg:map}}
+          <div class="tablewrap" style="margin-top:16px"><table>
+            <thead><tr><th>Site</th><th class="num">Hectares</th><th class="num">Trees planted</th><th>Position accuracy</th></tr></thead>
+            <tbody>
+              <tr><td>East slope <span class="chip sample"></span></td><td class="num">8</td><td class="num">900</td><td>Within 5 m</td></tr>
+              <tr><td>River terrace <span class="chip sample"></span></td><td class="num">6</td><td class="num">700</td><td>Within 8 m</td></tr>
+            </tbody></table></div>
+        </div>
+
+        <div role="tabpanel" id="p-species" aria-labelledby="tab-species" hidden>
+          <h2 style="font-size:1.3rem">Species</h2>
+          <div class="grid cols-3">
+            <div class="card flat species"><div class="pic">{{svg:leaf}}</div><div class="body"><h3>Indian rosewood</h3><div class="latin">Dalbergia sissoo</div><span class="chip">Fast-growing</span></div></div>
+            <div class="card flat species"><div class="pic">{{svg:leaf}}</div><div class="body"><h3>Simal</h3><div class="latin">Bombax ceiba</div><span class="chip">Agroforestry</span></div></div>
+            <div class="card flat species"><div class="pic">{{svg:leaf}}</div><div class="body"><h3>Khair</h3><div class="latin">Acacia catechu</div><span class="chip">Fast-growing</span></div></div>
+            <div class="card flat species"><div class="pic">{{svg:leaf}}</div><div class="body"><h3>Chir pine</h3><div class="latin">Pinus roxburghii</div><span class="chip">Hill planting</span></div></div>
+            <div class="card flat species"><div class="pic">{{svg:leaf}}</div><div class="body"><h3>Amla</h3><div class="latin">Phyllanthus emblica</div><span class="chip">Fruit and medicinal</span></div></div>
+            <div class="card flat species"><div class="pic">{{svg:leaf}}</div><div class="body"><h3>Lapsi</h3><div class="latin">Choerospondias axillaris</div><span class="chip">Fruit</span></div></div>
+          </div>
+          <p class="hint">Species names are real Nepal planting species. No per-tree CO2 figure is shown, on purpose.</p>
+        </div>
+
+        <div role="tabpanel" id="p-questions" aria-labelledby="tab-questions" hidden>
+          <h2 style="font-size:1.3rem">Questions</h2>
+          <details open><summary>Who owns the land?</summary><p>Answer comes from the partner agreement. <span class="chip sample"></span></p></details>
+          <details><summary>What happens after three years?</summary><p>The group keeps the trees and the benefit. We keep publishing the register. <span class="chip sample"></span></p></details>
+          <form class="card stack" style="margin-top:16px" data-mock-form>
+            <div class="field"><label for="ask">Ask a question</label><textarea id="ask" placeholder="Your question (mock: not sent)"></textarea></div>
+            <button class="btn small" type="submit">Send</button>
+          </form>
+        </div>
+
+        <div role="tabpanel" id="p-reviews" aria-labelledby="tab-reviews" hidden>
+          <h2 style="font-size:1.3rem">Reviews</h2>
+          <div class="empty">No reviews yet. Only buyers of this project can review it.</div>
+        </div>
+
+        <div role="tabpanel" id="p-trees" aria-labelledby="tab-trees" hidden>
+          <h2 style="font-size:1.3rem">Recently planted trees</h2>
+          <div class="treegrid">{{treegrid:12}}</div>
+          <p><a href="transparency.html#register">Search the whole register</a></p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="card sticky stack" aria-label="Plant here">
+      <h2 style="font-size:1.25rem">Plant here</h2>
+      <p class="price" style="font-size:1.6rem;font-weight:650;margin:0">$12 <span class="muted small">per tree <span class="chip sample"></span></span></p>
+      <div class="seg-btns"><a class="btn small ghost" href="plant.html?qty=1">1</a><a class="btn small ghost" href="plant.html?qty=5">5</a><a class="btn small ghost" href="plant.html?qty=10">10</a><a class="btn small ghost" href="plant.html?qty=25">25</a></div>
+      <a class="btn" href="plant.html">Plant trees here</a>
+      <p class="hint">Includes planting, 3 years of care, checks at 3 and 12 months.</p>
+    </aside>
+  </div>
+</div>

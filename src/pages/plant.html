@@ -1,0 +1,71 @@
+<!-- title: Plant and gift trees | desc: The plant flow: choose a project, quantity, species and gift details, with a live certificate preview. -->
+<div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Plant and gift</p>
+  <h1>Plant trees</h1>
+  <p class="lede">Choose where, how many, and whether it is a gift. Prices are samples.</p>
+</div>
+<form class="wrap split section" data-plant data-mock-form onsubmit="return false">
+  <div class="stack">
+    <fieldset class="card" style="border:1px solid var(--line)">
+      <legend class="small muted">1. Project</legend>
+      <label class="card" style="display:flex;gap:12px;align-items:flex-start;font-weight:400;margin-bottom:8px"><input type="radio" name="project" value="bardiya" data-price="12" data-name="Bardiya lowland forest" data-place="Bardiya" checked> <span><strong>Bardiya lowland forest</strong> <span class="chip sample"></span><br><span class="muted small">$12 a tree. 8,400 left to plant.</span></span></label>
+      <label class="card" style="display:flex;gap:12px;align-items:flex-start;font-weight:400;margin-bottom:8px"><input type="radio" name="project" value="nawalparasi" data-price="12" data-name="Nawalparasi hill slopes" data-place="Nawalparasi"> <span><strong>Nawalparasi hill slopes</strong> <span class="chip sample"></span><br><span class="muted small">$12 a tree. 3,100 left to plant.</span></span></label>
+      <label class="card" style="display:flex;gap:12px;align-items:flex-start;font-weight:400;margin-bottom:8px"><input type="radio" name="project" value="chitwan" data-price="14" data-name="Chitwan farm borders" data-place="Chitwan"> <span><strong>Chitwan farm borders</strong> <span class="chip sample"></span><br><span class="muted small">$14 a tree. Fruit and shade trees. 5,000 left to plant.</span></span></label>
+      <label class="card" style="display:flex;gap:12px;align-items:flex-start;font-weight:400"><input type="radio" name="project" value="mix" data-price="12" data-name="Balanced mix of all projects" data-place="all three projects"> <span><strong>Balanced mix</strong><br><span class="muted small">We split your trees across the three projects.</span></span></label>
+    </fieldset>
+
+    <fieldset class="card" style="border:1px solid var(--line)">
+      <legend class="small muted">2. How many, how often</legend>
+      <div class="seg-btns" style="margin-bottom:12px"><button type="button" data-qty="1" aria-pressed="false">1</button><button type="button" data-qty="5" aria-pressed="true">5</button><button type="button" data-qty="10" aria-pressed="false">10</button><button type="button" data-qty="25" aria-pressed="false">25</button></div>
+      <div class="field"><label for="qty">Other amount (1 to 1,000)</label><input id="qty" type="number" min="1" max="1000" value="5" inputmode="numeric" style="max-width:160px"></div>
+      <div class="seg-btns"><button type="button" data-freq="once" aria-pressed="true">Once</button><button type="button" data-freq="monthly" aria-pressed="false">Every month</button></div>
+      <p class="hint">Monthly: pause or cancel any time. <span class="chip sample"></span></p>
+    </fieldset>
+
+    <fieldset class="card" style="border:1px solid var(--line)">
+      <legend class="small muted">3. Species</legend>
+      <label style="font-weight:400"><input type="radio" name="species" checked> Let the partner choose what suits the site (recommended)</label>
+      <label style="font-weight:400"><input type="radio" name="species"> I want to choose</label>
+      <div class="grid cols-2" style="margin-top:8px">
+        <label style="font-weight:400"><input type="checkbox"> Indian rosewood (Sissoo)</label>
+        <label style="font-weight:400"><input type="checkbox"> Simal (silk cotton)</label>
+        <label style="font-weight:400"><input type="checkbox"> Khair (black catechu)</label>
+        <label style="font-weight:400"><input type="checkbox"> Amla (Indian gooseberry)</label>
+      </div>
+      <p class="hint">Choosing does not change the price in this mock. Availability depends on the site and season.</p>
+    </fieldset>
+
+    <fieldset class="card" style="border:1px solid var(--line)" id="gift-step">
+      <legend class="small muted">4. Gift (optional)</legend>
+      <label style="font-weight:400"><input type="checkbox" id="gift"> This is a gift</label>
+      <div id="gift-fields" hidden class="stack" style="margin-top:12px">
+        <div class="field"><label for="occasion">Occasion</label>
+          <select id="occasion"><option>A gift</option><option>Birthday</option><option>New baby</option><option>Thank you</option><option>In memory of someone</option></select></div>
+        <div class="field"><label for="to">Their name</label><input id="to" type="text" placeholder="Your friend"></div>
+        <div class="field"><label for="from">From</label><input id="from" type="text" placeholder="From a friend"></div>
+        <div class="field"><label for="msg">Message</label><textarea id="msg" maxlength="200" placeholder="A tree for you."></textarea><p class="hint">Up to 200 characters. The certificate is a link and a printable page; nothing is emailed in this mock.</p></div>
+      </div>
+    </fieldset>
+
+    <div class="cert" id="cert" hidden aria-live="polite">
+      {{svg:tree}}
+      <p class="small muted" style="margin:0"><span id="cert-occ">A gift</span> for</p>
+      <p class="big" id="cert-to">Your friend</p>
+      <p style="margin:0" id="cert-cert-line"><span id="cert-qty">5 trees in Bardiya</span></p>
+      <p id="cert-msg" class="muted">A tree for you.</p>
+      <p class="small muted" id="cert-from" style="margin:0">From a friend</p>
+    </div>
+  </div>
+
+  <aside class="card sticky stack" aria-label="Summary">
+    <h2 style="font-size:1.25rem">Your trees</h2>
+    <p style="margin:0"><strong id="sum-qty">5 trees</strong> in <span id="sum-project">Bardiya lowland forest</span></p>
+    <p style="margin:0;font-size:1.6rem;font-weight:650" id="sum-total">$60</p>
+    <details open><summary>Where the money goes (sample split)</summary>
+      <table><tbody id="sum-break"></tbody></table>
+      <p class="hint">Placeholder percentages. Real costs are not known yet.</p>
+    </details>
+    <button class="btn" type="button" id="add">Continue to the mock checkout</button>
+    <p class="hint">No payment is taken. Nothing leaves your browser.</p>
+  </aside>
+</form>

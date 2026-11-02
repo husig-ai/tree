@@ -1,0 +1,22 @@
+<!-- title: Mock checkout | desc: A checkout step with no payment, to show the flow only. -->
+<div class="wrap" data-checkout>
+  <p class="crumbs"><a href="plant.html">Plant and gift</a> / Checkout</p>
+  <h1>Checkout</h1>
+  <div class="note warn" role="note"><strong>No payment is taken here.</strong> There are no card fields on purpose. A real site would hand payment to a hosted payment provider, so card details never reach us. Nothing you type leaves your browser.</div>
+  <div class="split section">
+    <form class="card stack" id="co-form">
+      <h2 style="font-size:1.25rem">Your details</h2>
+      <div class="field"><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+      <div class="field"><label for="e">Email for the receipt</label><input id="e" type="email" autocomplete="email"></div>
+      <label style="font-weight:400"><input type="checkbox" required> I understand this is a mock and nothing is bought.</label>
+      <button class="btn" type="submit">Place mock order</button>
+    </form>
+    <aside class="card stack" aria-label="Order summary">
+      <h2 style="font-size:1.25rem">Order</h2>
+      <p style="margin:0" id="co-line">5 x tree, Bardiya lowland forest</p>
+      <p style="margin:0" class="muted" id="co-gift">For you</p>
+      <p style="margin:0;font-size:1.6rem;font-weight:650" id="co-total">$60</p>
+      <p class="hint">Sample price. <a href="plant.html">Change your trees</a></p>
+    </aside>
+  </div>
+</div>

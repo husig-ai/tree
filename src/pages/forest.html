@@ -1,0 +1,55 @@
+<!-- title: A sample buyer forest page | desc: A buyer's public forest: profile, counters, per-site cards, planters, tree grid, milestone badges and an embed snippet. -->
+<div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Forests / Sample Visitor</p>
+  <section class="section" style="padding-bottom:16px">
+    <div class="row" style="gap:16px">
+      <span class="avatar" aria-hidden="true">SV</span>
+      <div><h1 style="margin:0">Sample Visitor's forest</h1><p class="muted" style="margin:0">Last planting: 2026-10-04. <span class="chip sample"></span></p></div>
+    </div>
+    <p class="lede">A forest page belongs to one buyer or one company. The buyer chooses what to show. Everything here is made up.</p>
+    <div class="row"><button class="btn small" type="button" data-copy="url">Copy link</button><button class="btn small ghost" type="button" data-print>Print</button></div>
+  </section>
+
+  <div class="stats" aria-label="Forest counters, sample data">
+    <div class="stat"><div class="label">Trees</div><div class="value">24</div><div class="sub"><span class="chip sample"></span></div></div>
+    <div class="stat"><div class="label">Planting sites</div><div class="value">3</div><div class="sub"><span class="chip sample"></span></div></div>
+    <div class="stat"><div class="label">Planting rounds</div><div class="value">4</div><div class="sub"><span class="chip sample"></span></div></div>
+    <div class="stat"><div class="label">Trees alive at last check</div><div class="value">22</div><div class="sub"><span class="chip sample"></span></div></div>
+  </div>
+
+  <section class="section">
+    <h2>By site</h2>
+    <div class="grid cols-3">
+      <a class="card" href="project.html" style="text-decoration:none;color:inherit"><h3>Bardiya</h3><p class="stat value" style="border:0;padding:0;background:none;margin:0">12 trees</p><span class="muted small">See the project</span></a>
+      <a class="card" href="project.html" style="text-decoration:none;color:inherit"><h3>Nawalparasi</h3><p class="stat value" style="border:0;padding:0;background:none;margin:0">7 trees</p><span class="muted small">See the project</span></a>
+      <a class="card" href="project.html" style="text-decoration:none;color:inherit"><h3>Chitwan</h3><p class="stat value" style="border:0;padding:0;background:none;margin:0">5 trees</p><span class="muted small">See the project</span></a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <h2>Trees cared for by</h2>
+    <p class="muted">Planters appear by first name only, and only with their consent. <span class="chip sample"></span></p>
+    <div class="row" style="gap:16px">
+      <div class="row"><span class="avatar" aria-hidden="true">S</span> Sita</div>
+      <div class="row"><span class="avatar" aria-hidden="true">R</span> Ram</div>
+      <div class="row"><span class="avatar" aria-hidden="true">M</span> Maya</div>
+      <div class="row"><span class="avatar" aria-hidden="true">B</span> Bishnu</div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <h2>Every tree</h2>
+    <div class="treegrid">{{treegrid:24}}</div>
+  </section>
+
+  <section class="section alt" style="margin-inline:calc(50% - 50vw);padding-inline:calc(50vw - 50%)">
+    <h2>Milestones</h2>
+    <div class="row">
+      <span class="chip">First tree</span><span class="chip">10 trees</span><span class="chip">First tree alive at 12 months</span><span class="chip sample"></span>
+    </div>
+    <h3 style="margin-top:20px">Show it on your own site</h3>
+    <p class="muted small">A small badge with a live tree count that links here. Snippet below is a mock.</p>
+    <pre id="embed" class="card" style="overflow-x:auto;margin:0"><code>&lt;a href="https://example.org/forest/sample-visitor"&gt;24 trees on Rukh&lt;/a&gt;</code></pre>
+    <p><button class="btn small ghost" type="button" data-copy="#embed">Copy snippet</button></p>
+  </section>
+</div>

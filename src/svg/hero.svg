@@ -1,0 +1,7 @@
+<svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<circle class="sun" cx="930" cy="70" r="46"/>
+<path class="hill1" d="M0 190 C150 120 300 150 450 130 C620 105 760 160 920 120 C1040 92 1120 120 1200 100 V300 H0Z"/>
+<path class="hill2" d="M0 230 C160 170 320 210 500 180 C680 150 820 215 1000 185 C1100 168 1160 180 1200 175 V300 H0Z"/>
+<path class="hill3" d="M0 270 C200 225 380 255 580 235 C780 215 960 262 1200 232 V300 H0Z"/>
+<g class="treeglyph"><path d="M180 232 168 252h8l-9 14h13v10h4v-10h13l-9-14h8z"/><path d="M260 238 250 255h7l-8 12h11v8h3v-8h11l-8-12h7z"/><path d="M980 236 968 256h8l-9 14h13v9h4v-9h13l-9-14h8z"/><path d="M1060 242 1051 257h6l-7 11h10v7h3v-7h10l-7-11h6z"/><path d="M620 240 610 256h7l-8 12h11v8h3v-8h11l-8-12h7z"/></g>
+</svg>

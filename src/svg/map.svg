@@ -1,0 +1,7 @@
+<svg class="map" viewBox="0 0 600 230" role="img" aria-label="Schematic map of Nepal with three sample planting sites. Not to scale.">
+<path class="land" d="M14 84 L118 40 L250 62 L392 28 L586 66 L566 124 L430 150 L300 184 L160 204 L62 172 L20 130Z"/>
+<g><circle class="pin" cx="110" cy="148" r="8"/><text x="124" y="146">Bardiya (sample)</text></g>
+<g><circle class="pin" cx="268" cy="158" r="8"/><text x="282" y="178">Nawalparasi (sample)</text></g>
+<g><circle class="pin" cx="330" cy="140" r="8"/><text x="344" y="130">Chitwan (sample)</text></g>
+<text x="14" y="222">Schematic, not to scale. West on the left.</text>
+</svg>
