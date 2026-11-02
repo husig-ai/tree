@@ -17,6 +17,5 @@ A clickable prototype of a tree-sponsorship website for planting in Nepal. It is
 
 - `src/pages/` page bodies, `src/partials/` header, footer and head, `src/svg/` inline drawings.
 - `docs/assets/style.css` and `docs/assets/app.js` are written by hand. Everything else in `docs/` is built.
-- `docs/components.html` lists each component and the kind of site it was seen on.
 
 GitHub Pages terms do not allow running an online business there, so a real shop needs other hosting.
