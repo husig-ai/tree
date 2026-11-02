@@ -2,9 +2,9 @@
 <div class="wrap">
   <p class="crumbs"><a href="index.html">Home</a> / Plant and gift</p>
   <h1>Plant trees</h1>
-  <p class="lede">Choose where, how many, and whether it is a gift. Prices are samples.</p>
+  <p class="lede">Plan your trees: choose where, how many, and whether it is a gift. Planting is not open yet, so nothing can be bought, and prices are examples.</p>
 </div>
-<form class="wrap split section" data-plant data-mock-form onsubmit="return false">
+<form class="wrap split section" data-plant onsubmit="return false">
   <div class="stack">
     <fieldset class="card" style="border:1px solid var(--line)">
       <legend class="small muted">1. Project</legend>
@@ -32,7 +32,7 @@
         <label style="font-weight:400"><input type="checkbox"> Khair (black catechu)</label>
         <label style="font-weight:400"><input type="checkbox"> Amla (Indian gooseberry)</label>
       </div>
-      <p class="hint">Choosing does not change the price in this mock. Availability depends on the site and season.</p>
+      <p class="hint">Choosing does not change the price. Availability depends on the site and season.</p>
     </fieldset>
 
     <fieldset class="card" style="border:1px solid var(--line)" id="gift-step">
@@ -43,7 +43,7 @@
           <select id="occasion"><option>A gift</option><option>Birthday</option><option>New baby</option><option>Thank you</option><option>In memory of someone</option></select></div>
         <div class="field"><label for="to">Their name</label><input id="to" type="text" placeholder="Your friend"></div>
         <div class="field"><label for="from">From</label><input id="from" type="text" placeholder="From a friend"></div>
-        <div class="field"><label for="msg">Message</label><textarea id="msg" maxlength="200" placeholder="A tree for you."></textarea><p class="hint">Up to 200 characters. The certificate is a link and a printable page; nothing is emailed in this mock.</p></div>
+        <div class="field"><label for="msg">Message</label><textarea id="msg" maxlength="200" placeholder="A tree for you."></textarea><p class="hint">Up to 200 characters. The certificate is a link and a printable page.</p></div>
       </div>
     </fieldset>
 
@@ -61,11 +61,11 @@
     <h2 style="font-size:1.25rem">Your trees</h2>
     <p style="margin:0"><strong id="sum-qty">5 trees</strong> in <span id="sum-project">Bardiya lowland forest</span></p>
     <p style="margin:0;font-size:1.6rem;font-weight:650" id="sum-total">$60</p>
-    <details open><summary>Where the money goes (sample split)</summary>
+    <details open><summary>Where the money goes (example split)</summary>
       <table><tbody id="sum-break"></tbody></table>
-      <p class="hint">Placeholder percentages. Real costs are not known yet.</p>
+      <p class="hint">Example percentages. Real costs are not known yet.</p>
     </details>
-    <button class="btn" type="button" id="add">Continue to the mock checkout</button>
-    <p class="hint">No payment is taken. Nothing leaves your browser.</p>
+    <button class="btn" type="button" disabled>Planting opens soon</button>
+    <p class="hint">Nothing can be bought yet. Nothing you enter here leaves your browser.</p>
   </aside>
 </form>

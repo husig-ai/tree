@@ -1,4 +1,4 @@
-/* Rukh concept mock. Tokens first; dark mode selected, not inverted. */
+/* Rukh. Tokens first; dark mode selected, not inverted. */
 :root {
   color-scheme: light;
   --bg: #f6f3ec; --surface: #fffefa; --ink: #1a2b21; --ink-2: #44524a; --muted: #66726b;
@@ -56,8 +56,8 @@ ul { padding-left: 1.2em; margin: 0 0 1em; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 /* concept banner */
-.mock-banner { background: var(--warm); color: var(--on-warm); font-size: .875rem; text-align: center; padding: 8px var(--gutter); }
-.mock-banner a { color: inherit; font-weight: 600; }
+.preview-banner { background: var(--warm); color: var(--on-warm); font-size: .875rem; text-align: center; padding: 8px var(--gutter); }
+.preview-banner a { color: inherit; font-weight: 600; }
 
 /* header */
 .site-head { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
@@ -250,7 +250,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 @media (forced-colors: active) { .btn, .chip, .card, .stat { border: 1px solid CanvasText; } .chart .bar { fill: Highlight; } }
 @media print {
   body { background: #fff; color: #000; }
-  .mock-banner, .site-head, .site-foot, .cookie, .no-print, .toast { display: none !important; }
+  .preview-banner, .site-head, .site-foot, .cookie, .no-print, .toast { display: none !important; }
   .print-only { display: block !important; }
   .cert { border-color: #000; }
 }

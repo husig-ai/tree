@@ -1,4 +1,4 @@
-/* Rukh concept mock. Vanilla JS, no requests, nothing leaves the browser. */
+/* Rukh. Vanilla JS, no requests, nothing leaves the browser. */
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -34,7 +34,7 @@
     var open = mn.classList.toggle("open"); mb.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  /* cookie notice (the mock sets no cookies and loads no trackers) */
+  /* cookie notice (the site sets no cookies and loads no trackers) */
   var ck = $("#cookie");
   if (ck && !store.get("rukh-cookie")) ck.hidden = false;
   $$("[data-cookie]").forEach(function (b) { b.addEventListener("click", function () { store.set("rukh-cookie", b.getAttribute("data-cookie")); ck.hidden = true; }); });
@@ -49,11 +49,6 @@
     });
   });
   $$("[data-print]").forEach(function (b) { b.addEventListener("click", function () { window.print(); }); });
-
-  /* mock forms: nothing is sent or stored */
-  $$("[data-mock-form]").forEach(function (f) {
-    f.addEventListener("submit", function (e) { e.preventDefault(); toast("Mock: nothing was sent or stored."); });
-  });
 
   /* tabs */
   $$(".tabs").forEach(function (t) {
@@ -104,7 +99,7 @@
     upd();
   }
 
-  /* plant page: calculator, gift and certificate preview, basket */
+  /* plant page: calculator, gift and certificate preview */
   var pf = $("[data-plant]");
   if (pf) {
     var q = new URLSearchParams(location.search);
@@ -131,25 +126,7 @@
     function bind(id, out, fallback) { var i = $(id), o = $(out); i.addEventListener("input", function () { o.textContent = i.value.trim() || fallback; }); }
     bind("#to", "#cert-to", "Your friend"); bind("#msg", "#cert-msg", "A tree for you."); bind("#from", "#cert-from", "From a friend");
     $("#occasion").addEventListener("change", function (e) { $("#cert-occ").textContent = e.target.value; });
-    $("#add").addEventListener("click", function () {
-      var p = proj();
-      store.set("rukh-basket", JSON.stringify({ project: p.getAttribute("data-name"), place: p.getAttribute("data-place"), unit: Number(p.getAttribute("data-price")), qty: state.qty, freq: state.freq, gift: gift.checked, to: $("#to").value.trim() }));
-      location.href = "checkout.html";
-    });
     render();
-  }
-
-  /* basket badge and checkout summary */
-  var basket = null;
-  try { basket = JSON.parse(store.get("rukh-basket") || "null"); } catch (e) { basket = null; }
-  $$("[data-basket-count]").forEach(function (el) { el.textContent = basket ? basket.qty : 0; });
-  var co = $("[data-checkout]");
-  if (co) {
-    var b = basket || { project: "Sample project", place: "Nepal", unit: PRICE, qty: 5, freq: "once", gift: false };
-    $("#co-line").textContent = b.qty + " x tree, " + b.project;
-    $("#co-total").textContent = money(b.qty * b.unit) + (b.freq === "monthly" ? " / month" : "");
-    $("#co-gift").textContent = b.gift ? "Gift" + (b.to ? " for " + b.to : "") : "For you";
-    $("#co-form").addEventListener("submit", function (e) { e.preventDefault(); location.href = "thanks.html"; });
   }
 
   /* single-series column chart drawn from its table (the table stays as the text view) */

@@ -1,11 +1,11 @@
-# Tree: concept mock
+# Rukh
 
-A clickable prototype of a tree-sponsorship website for planting in Nepal. It is a design study, not a product.
+An early preview of a tree-sponsorship website for planting in Nepal. Planting is not open yet.
 
-- Nothing is for sale. No payment is taken, no email is stored, and no request leaves the site.
-- Every number is sample data. There are no real partners, reviews, customers or awards.
+- Nothing can be bought: there is no checkout and no payment.
+- No forms, no stored emails, and no request leaves the site.
+- Numbers, projects, partners and prices are examples, and are tagged "sample".
 - The site makes no carbon or offset claims.
-- Working name "Rukh" is a placeholder.
 
 ## Run it
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Rukh concept mock: src/pages + src/partials + src/svg -> docs/*.html (static, no dependencies)."""
+"""Build the Rukh site: src/pages + src/partials + src/svg -> docs/*.html (static, no dependencies)."""
 import os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
